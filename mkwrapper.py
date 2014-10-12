@@ -38,7 +38,6 @@ RESERVED_NAMES = ('free',)
 
 # Reasons for excluding the following functions
 # appnd*, etc. - not looked into translating a SpiceCell to a python object yet.
-# axisar_c - haven't written code to parse arrays
 # bodvar_c - deprecated
 # bschoc_c, etc. - how to support const void * array
 # ckw05_c - how to support SpiceCK05Subtype
@@ -46,9 +45,10 @@ RESERVED_NAMES = ('free',)
 # spkw18_c - how to support SpiceSPK18Subtype
 # dafgs_c - how to deal with an array that doesn't have the number of elements
 # dasec_c - how to handle void types in parameter list
-# dafgh_c - does function actually exist?  I found no C file ...
+# dafgh_c, illumg_c - does function actually exist?  I found no C file ...
 # ucase_c - not needed for python
-# gfevnt_c, gffove_c, gfocce_c, gfuds_c, uddc_c, uddf_c - how to support callbacks
+# gfevnt_c, gffove_c, gfocce_c, gfuds_c, uddc_c, uddf_c, gfudb_c - how to support callbacks
+# edterm_c, spkw20_c - can't yet handle array with no length specified
 exclude_list = (
     'cnames',
 
@@ -74,12 +74,14 @@ exclude_list = (
 
     'dasec_c', 'ekpsel_c', 'ekrcec_c', 'gcpool_c', 'gnpool_c',
 
-    'dafgh_c', 'prefix_c',
+    'dafgh_c', 'prefix_c', 'illumg_c',
 
     'lcase_c', 'ucase_c', 'getcml_c', 'lparse_c', 'lparsm_c', 'prompt_c',
     'putcml_c', 'reordc_c', 'shellc_c', 'sumad_c', 'sumai_c',
 
-    'gfevnt_c', 'gffove_c', 'gfocce_c', 'gfuds_c', 'uddc_c', 'uddf_c',
+    'gfevnt_c', 'gffove_c', 'gfocce_c', 'gfuds_c', 'uddc_c', 'uddf_c', 'gfudb_c',
+
+    'edterm_c', 'spkw20_c',
 )
 
 module_defs = []
